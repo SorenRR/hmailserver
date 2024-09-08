@@ -37,7 +37,8 @@ namespace HM
 
       static void Base64Encode(const String &sInput, String &sOutput);
       static void Base64Decode(const String &sInput, String &sOutput);
-      
+      static bool IsBase64NullDelimited(const String &sInput);
+
       static bool IsValidIPAddress(const String &sAddress);
       static String ToUSASCII(const String &sInput);
       static std::vector<String> GetAllButFirst(std::vector<String> sInput);

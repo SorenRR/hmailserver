@@ -66,6 +66,34 @@ namespace HM
             // Clean the URL from linefeeds
             CleanURL_(sURL);
 
+            // ignore some HTML doctype url's, which are default in for example Outlook composed mails
+            // www.w3.org
+            // www.w3c.org
+            // schemas.microsoft.com
+            // fonts.googleapis.com
+            // fonts.gstatic.com
+            sRegex = "(?=.*)(w3(?:c)?\\.org|(?:schemas\\.microsoft|fonts\\.(?:googleapis|gstatic))\\.com)";
+            boost::wregex expr(sRegex, boost::wregex::icase);
+            if (boost::regex_match(sURL, expr))
+            {
+               sRemainingSearchSpace = matches.suffix();
+               continue;
+            }
+
+            if (addresses.find(sURL) == addresses.end())
+            {
+               String slogMessage;
+               slogMessage.Format(_T("SURBL: Found URL: %s"), sURL.c_str());
+               LOG_DEBUG(slogMessage);
+
+               addresses.insert(sURL);
+
+               if (addresses.size() > maxURLsToProcess)
+               {
+                  break;
+               }
+            }
+
             // Trim away top domain
             if (!CleanHost_(sURL))
             {

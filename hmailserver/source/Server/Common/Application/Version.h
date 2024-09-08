@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #define HMAILSERVER_VERSION "5.6.9"
-#define HMAILSERVER_BUILD "2644.93 (x86)"
+#define HMAILSERVER_BUILD "2644.95 (x86)"
 
 /*
 [list=1]
@@ -85,9 +85,10 @@
 [*]Update: Done som MIME Folding changes and changed a few error messages.
 [*]Fix: hMailServer AUTH PLAIN in SMTP fails when authzid is supplied
 [*]Fix: fileutilities.cpp - bytes->GetSize() crashes when bytes = std::shared_ptr<ByteBuffer> empty;
-[*]Update: OpenSSL 3.0.13
 [*]Fix: Minor bugfix where the Received-SPF diagnostic header gave inaccurate results when receiving mail through a (trusted/internal) relay
 [*]Added: IPv6 Support for BLCheck [url=https://github.com/hmailserver/hmailserver/pull/487]pull 487[/url]
 [*]Update: Replacement for the old SA "winsock error 2" workaround/fix and eliminates (all) EOF errors/warnings (and forced disconnects, possible related to HM5136?) altogether
+[*]Update: OpenSSL 3.0.14
+[*]Fix: Improved AUTH PLAIN base64 encoded username and password masking, retain client command format for troubleshooting purposes
 [/list]
 */

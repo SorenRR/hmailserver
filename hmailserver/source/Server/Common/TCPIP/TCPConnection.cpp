@@ -478,7 +478,7 @@ namespace HM
    }
 
    void
-      TCPConnection::AsyncReadCompleted(const boost::system::error_code& error, size_t bytes_transferred)
+   TCPConnection::AsyncReadCompleted(const boost::system::error_code& error, size_t bytes_transferred)
    {
       UpdateAutoLogoutTimer();
 
