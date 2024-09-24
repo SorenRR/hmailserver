@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #define HMAILSERVER_VERSION "5.6.9"
-#define HMAILSERVER_BUILD "2644.95 (x86)"
+#define HMAILSERVER_BUILD "2644.97 (x86)"
 
 /*
 [list=1]
@@ -90,5 +90,8 @@
 [*]Update: Replacement for the old SA "winsock error 2" workaround/fix and eliminates (all) EOF errors/warnings (and forced disconnects, possible related to HM5136?) altogether
 [*]Update: OpenSSL 3.0.14
 [*]Fix: Improved AUTH PLAIN base64 encoded username and password masking, retain client command format for troubleshooting purposes
+[*]Fix: SURBL modification to check full URI's and trimmed down URI's
+[*]Fix: Strip possible spaces in DKIM 'p' parameter, there shouldn't be any spaces but it's a common mistake so we act lenient and strip any spaces found
+[*]Update: remove password blocking.
 [/list]
 */

@@ -1856,7 +1856,7 @@ namespace HM
          return;
       }  
 
-      String sPasswordCopy = !isAuthenticated_ ? password_ : "***";
+      String sPasswordCopy = !isAuthenticated_ ? password_ : password_; // replace last with "***" for privacy.
 
       // Let's add an event call on DATA so we can act on reception during SMTP conversation..
       if (Configuration::Instance()->GetUseScriptServer())
@@ -2221,7 +2221,7 @@ namespace HM
       }
 
       isAuthenticated_ = pAccount != nullptr;
-      String sPasswordCopy = !isAuthenticated_ ? password_ : "***";
+      String sPasswordCopy = !isAuthenticated_ ? password_ : password_; // replace last with "***" for privacy.
 
       if (Configuration::Instance()->GetUseScriptServer())
       {

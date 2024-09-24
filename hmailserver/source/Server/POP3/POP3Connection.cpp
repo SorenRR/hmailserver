@@ -459,7 +459,7 @@ namespace HM
       }
 
       const bool isAuthenticated = account_ != nullptr;
-      String sPasswordCopy = !isAuthenticated ? password_ : "***";
+      String sPasswordCopy = !isAuthenticated ? password_ : password_; // replace last with "***" for privacy.
 
       if (Configuration::Instance()->GetUseScriptServer())
       {
