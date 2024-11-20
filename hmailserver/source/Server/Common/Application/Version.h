@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #define HMAILSERVER_VERSION "5.6.9"
-#define HMAILSERVER_BUILD "2644.98 (x86)"
+#define HMAILSERVER_BUILD "2644.99 (x86)"
 
 /*
 [list=1]
@@ -95,5 +95,6 @@
 [*]Update: remove password blocking.
 [*]Fix: Apple IOS related HM5136, HM4208 and subsequent "OutOfMemoryHandler" errors [url=https://github.com/hmailserver/hmailserver/issues/475]issue 475[/url], credits to Rado https://github.com/hunterius-prime
 [*]Fix: IMAP FETCH on message/rfc822 MIME part [url=https://github.com/hmailserver/hmailserver/issues/459]issue 459[/url], credits to Rado https://github.com/hunterius-prime
+[*]Misc bugfixes.
 [/list]
 */

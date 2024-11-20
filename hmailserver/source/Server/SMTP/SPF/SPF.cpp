@@ -47,7 +47,8 @@ namespace HM
       const char* explain;
       int result=SPFQuery(family,BinaryIP,T2A(sSenderEmail),NULL,T2A(sHeloHost),NULL,&explain);
 
-      LOG_APPLICATION(Formatter::Format("SPF::Test &sSenderIP = {0}, &sSenderEmail = {1}, &sHeloHost = {2}, result = {3}, &explain = {4}", sSenderIP, sSenderEmail, sHeloHost, result, explain));
+      //LOG_APPLICATION(Formatter::Format("SPF::Test &sSenderIP = {0}, &sSenderEmail = {1}, &sHeloHost = {2}, result = {3}, &explain = {4}", sSenderIP, sSenderEmail, sHeloHost, result, explain));
+      LOG_DEBUG(Formatter::Format("SPF::Test &sSenderIP = {0}, &sSenderEmail = {1}, &sHeloHost = {2}, result = {3}, &explain = {4}", sSenderIP, sSenderEmail, sHeloHost, result, explain));
 
       if (explain != NULL)
       {
