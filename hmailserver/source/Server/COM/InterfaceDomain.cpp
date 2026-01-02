@@ -1238,7 +1238,6 @@ STDMETHODIMP InterfaceDomain::put_DKIMSignAliasesEnabled(VARIANT_BOOL newVal)
    }
 }
 
-
 STDMETHODIMP InterfaceDomain::get_DKIMSelector(BSTR *pVal)
 {
    try

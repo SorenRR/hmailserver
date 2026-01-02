@@ -46,6 +46,5 @@ namespace HM
    {
       TlsOptionPreferServerCiphers = 2,
       TlsOptionPrioritizeChaCha = 4
-
    };
 }

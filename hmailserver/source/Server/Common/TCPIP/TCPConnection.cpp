@@ -588,7 +588,6 @@ namespace HM
 
       auto saEnabled = Configuration::Instance()->GetAntiSpamConfiguration().GetSpamAssassinEnabled();
       auto saPort = Configuration::Instance()->GetAntiSpamConfiguration().GetSpamAssassinPort();
-
 #ifdef _DEBUG
       if (error.value() == boost::asio::error::eof)
       {

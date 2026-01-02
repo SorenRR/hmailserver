@@ -72,7 +72,6 @@ namespace HM
                setSpamTestResults.insert(pResult);
             }
          }
-
       }      
 
 

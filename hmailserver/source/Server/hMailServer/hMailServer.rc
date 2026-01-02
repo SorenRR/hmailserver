@@ -1,6 +1,7 @@
 // Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
+#include "../Common/Application/Version.h"
 
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
@@ -73,11 +74,11 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "hMailServer"
             VALUE "FileDescription", "hMailServer"
-            VALUE "FileVersion", "1.0"
+            VALUE "FileVersion", HMAILSERVER_VERSION
             VALUE "InternalName", "hMailServer.exe"
             VALUE "OriginalFilename", "hMailServer.exe"
             VALUE "ProductName", "hMailServer"
-            VALUE "ProductVersion", "1.0"
+            VALUE "ProductVersion", HMAILSERVER_VERSION
         END
     END
     BLOCK "VarFileInfo"

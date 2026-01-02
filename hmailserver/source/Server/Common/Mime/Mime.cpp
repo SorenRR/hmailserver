@@ -324,9 +324,6 @@ namespace HM
       delete [] pValue;
 
       // We need to unfold the field value
-      //if (unfold)
-      //   UnfoldField(value_);
-
       if (unfold && name_.length() > 0)
       {
          AnsiString name = name_.c_str();
@@ -351,7 +348,8 @@ namespace HM
          unsigned char sChar = strField[i];
 
          // Unfolded strings should not contain any crlf.
-         if (sChar == '\r' || sChar == '\n')
+         // unless it starts with crlf
+         if ((sChar == '\r' || sChar == '\n') && i > 1)
          {
             // If we find a new line, we should replace it with
             // a single space. So we just add a space here once

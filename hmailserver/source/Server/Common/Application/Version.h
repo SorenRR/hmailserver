@@ -2,9 +2,9 @@
 
 #define HMAILSERVER_VERSION "5.6.9"
 #define HMAILSERVER_VERSION_NUMERIC 5,6,9,2644
-// #define HMAILSERVER_BUILD "2644.99 (x86)"
+// #define HMAILSERVER_BUILD "2644.100 (x86)"
 #define HMAILSERVER_BUILD "2644"
-#define HMAILSERVER_MOD "99"
+#define HMAILSERVER_MOD "100"
 
 /*
 [list=1]
@@ -99,5 +99,7 @@
 [*]Fix: Apple IOS related HM5136, HM4208 and subsequent "OutOfMemoryHandler" errors [url=https://github.com/hmailserver/hmailserver/issues/475]issue 475[/url], credits to Rado https://github.com/hunterius-prime
 [*]Fix: IMAP FETCH on message/rfc822 MIME part [url=https://github.com/hmailserver/hmailserver/issues/459]issue 459[/url], credits to Rado https://github.com/hunterius-prime
 [*]Misc bugfixes.
+[*]Fix: Do not unwrap Content-* mime headers as this can possibly break DKIM validation when forwarding
+[*]Fix: Do not unwrap X-Spam-* mime headers, eg: retain SpamAssassin X-Spam-* headers formatting
 [/list]
 */

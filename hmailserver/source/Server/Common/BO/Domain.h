@@ -124,7 +124,6 @@ namespace HM
       bool GetDKIMAliasesEnabled() const;
       void SetDKIMAliasesEnabled(bool newVal);
 
-
       AnsiString GetDKIMSelector() const;
       void SetDKIMSelector(const String &newValue);
 

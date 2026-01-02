@@ -469,7 +469,7 @@ namespace HM
                }
             }
 
-            for (String record : a_records)
+            for(String record : a_records)
             {
                HostNameAndIpAddress hostAndAddress;
                hostAndAddress.SetHostName(domain);
